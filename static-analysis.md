@@ -22,15 +22,11 @@ The executable is a 32-bit C++ PE compiled for Windows Vista (Timestamp: July 20
 
 <img width="740" height="164" alt="image" src="https://github.com/user-attachments/assets/3016d699-c849-4e07-89ca-4512ba78fc58" />
 
-dnsapi.dll -> DnsQuery_W
-    Attackers can use DNS queries to discover valid domain names within a network. By querying for various records, they can enumerate active devices, services, and their configurations.
-    
-mpr.dll -> WNetAddConnection2W
-    Ransomware might leverage WNetAddConnection2W to connect to shared drives where sensitive data is stored, thereby facilitating data encryption or exfiltration
-    
-advapi32.dll -> ClearEventLogW
-    By clearing event logs, attackers can hide indicators of compromise (IoCs) and other suspicious behaviors, making detection less likely during investigations.
-
+| API                   | Purpose                    | MITRE ATT&CK                         |
+| --------------------- | -------------------------- | ------------------------------------ |
+| `DnsQuery_W`          | Internal network discovery | T1018 – Remote System Discovery      |
+| `WNetAddConnection2W` | Connect to SMB shares      | T1021.002 – SMB/Windows Admin Shares |
+| `ClearEventLogW`      | Anti-forensics             | T1070 – Indicator Removal            |
 
 ## 2. Ransom Note
 
