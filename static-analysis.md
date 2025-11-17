@@ -1,6 +1,7 @@
 # Static Analysis
 
-This sample is a C++ 32 bit portable executable file and was compiled for Windows Vista  on July 2025
+This report documents the static analysis of the “Global Group RaaS” ransomware sample.
+The executable is a 32-bit C++ PE compiled for Windows Vista (Timestamp: July 2025) and exhibits typical RaaS behavior including network propagation, credential usage, and data encryption techniques.
 
 **SHA-256:** 680c35d2b2343c0ad8d51accea696388bfba036476e6cf10cda597b5169061c9  
 **MD5:**     556baf26333a392f3377f41c26189d3c
