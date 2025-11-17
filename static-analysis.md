@@ -9,7 +9,7 @@ This sample is a C++ 32 bit portable executable file and was compiled for Window
 
 ## 1. Imports & API Calls
 
-### 4.1 High-level API categories
+### 1.1 High-level API categories
 - **Crypto:** `CryptGenRandom` etc.
 - **File I/O:** `CreateFileW`, `WriteFile`, `ReadFile`, `FindFirstFileExW`, `FindNextFileW`
 - **Process & registry:** `RegSetValueExW`, `RegCreateKeyExW`, `CreateProcessW`, `TerminateProcess`
@@ -17,7 +17,7 @@ This sample is a C++ 32 bit portable executable file and was compiled for Window
 - **Networking:** `WNetAddConnection2W`, `NetShareEnum`, `IcmpSendEcho`, `DnsQuery_W`
 - **Anti-analysis:** `IsDebuggerPresent`
 
-### 4.2 Potentially malicious imports
+### 1.2 Potentially malicious imports
 
 <img width="740" height="164" alt="image" src="https://github.com/user-attachments/assets/3016d699-c849-4e07-89ca-4512ba78fc58" />
 
@@ -36,3 +36,19 @@ advapi32.dll -> ClearEventLogW
 The content of the ransom note is stored as an encoded string in the executable
 
 <img width="1041" height="848" alt="1_BagCF6T5p-M6-AxrGh8KGg" src="https://github.com/user-attachments/assets/733bab2b-4809-4ffd-a80f-079806b19bcc" />
+
+## 3. Initialization
+
+Global Ransomware first sets the process's priority class to HIGH_PRIORITY_CLASS using the SetPriorityClass API function.
+This strategic action ensures that the ransomware operates with enhanced efficiency and responsiveness, allowing it to execute its malicious tasks more effectively.
+
+<img width="808" height="169" alt="1_WHvIDFMsRAz9RPnnaaVehQ" src="https://github.com/user-attachments/assets/c8b3eb2c-69e6-416d-9417-2f5dfdc2c627" />
+
+## 4. Command Line Arguments
+
+The ransomware requires a password passed by the -code command line argument in order to start sucessfully.
+Below is the list of all command-line arguments it accepts:
+
+- **-log :** Enables console logging
+
+
