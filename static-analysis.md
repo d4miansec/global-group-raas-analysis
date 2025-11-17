@@ -39,14 +39,14 @@ The content of the ransom note is stored as an encoded string in the executable
 
 ## 3. Initialization
 
-Global Ransomware first sets the process's priority class to HIGH_PRIORITY_CLASS using the SetPriorityClass API function.
+Global Ransomware first sets the process's priority class to **HIGH_PRIORITY_CLASS** using the **SetPriorityClass** API function.
 This strategic action ensures that the ransomware operates with enhanced efficiency and responsiveness, allowing it to execute its malicious tasks more effectively.
 
 <img width="808" height="169" alt="1_WHvIDFMsRAz9RPnnaaVehQ" src="https://github.com/user-attachments/assets/c8b3eb2c-69e6-416d-9417-2f5dfdc2c627" />
 
 ## 4. Command Line Arguments
 
-The ransomware requires a password passed by the -code command line argument in order to start sucessfully.
+The ransomware requires a password passed by the **-code** command line argument in order to start sucessfully.
 Below is the list of all command-line arguments it accepts:
 
 - **-log :** Enables console logging
@@ -68,20 +68,20 @@ Below is the list of all command-line arguments it accepts:
 
 ## 5. Run-Once Mutex
 
-The ransomware checks for another instance of itself by looking for a specific mutex using CreateMutexW.
-If the mutex already exists, it cleans up and exits instantly. However, this check can be bypassed by using the -force command line option, allowing multiple instances to run on the same system.
+The ransomware checks for another instance of itself by looking for a specific mutex using **CreateMutexW**.
+If the mutex already exists, it cleans up and exits instantly. However, this check can be bypassed by using the **-force** command line option, allowing multiple instances to run on the same system.
 
 <img width="627" height="417" alt="1_Kby5q6gHQLSpZMlcEEnmEg" src="https://github.com/user-attachments/assets/d374131d-7ad1-4a35-b220-f3d6555524e9" />
 
 ## 6. Deleting Event Logs and Shadow Copies
 
 To hide its tracks, the malware deletes the Event Log.
-the function sets up an array of event log types and goes through each one. It tries to open each log using OpenEventLogW.
-If it successfully opens a log, it clears it with ClearEventLogW. If clearing fails, it backs up the log to NUL, which means it discards the log.
+the function sets up an array of event log types and goes through each one. It tries to open each log using **OpenEventLogW**.
+If it successfully opens a log, it clears it with **ClearEventLogW**. If clearing fails, it backs up the log to **NUL**, which means it discards the log.
 
 <img width="506" height="505" alt="1_w0rP7NVQN8HvcBBN6xWUoA" src="https://github.com/user-attachments/assets/6f379e5d-449c-4ec5-afa4-160571c62d76" />
 
-For deleting shadow copies, it prepares the CMD command and executes it using CreateProcessW.
+For deleting shadow copies, it prepares the CMD command and executes it using **CreateProcessW**.
 
 <img width="572" height="362" alt="1_oWpWCIlHQrsSiLmfLpiHWQ" src="https://github.com/user-attachments/assets/6e9d09a5-08bf-488a-a4b9-1c53e620244c" />
 
