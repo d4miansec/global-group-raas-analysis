@@ -16,3 +16,7 @@ This sample is a C++ 32 bit portable executable file and was compiled for Window
 - **System controls:** `OpenSCManagerW`, `ControlService`, `TerminateProcess`, `DuplicateTokenExW`
 - **Networking:** `WNetAddConnection2W`, `NetShareEnum`, `IcmpSendEcho`, `DnsQuery_W`
 - **Anti-analysis:** `IsDebuggerPresent`
+
+### 4.2 Potentially malicious imports
+List suspicious imports:
+<img width="740" height="164" alt="image" src="https://github.com/user-attachments/assets/3016d699-c849-4e07-89ca-4512ba78fc58" />
