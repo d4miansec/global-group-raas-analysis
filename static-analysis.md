@@ -1,4 +1,4 @@
-<img width="653" height="291" alt="1_RfF3Q6hJxKudk7B3h1kpnw" src="https://github.com/user-attachments/assets/d2b386fb-5990-4337-842a-ec4d7bad8ae1" /># Static Analysis
+# Static Analysis
 
 This sample is a C++ 32 bit portable executable file and was compiled for Windows Vista  on July 2025
 
