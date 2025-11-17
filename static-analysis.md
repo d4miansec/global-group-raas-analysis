@@ -31,3 +31,8 @@ advapi32.dll -> ClearEventLogW
     By clearing event logs, attackers can hide indicators of compromise (IoCs) and other suspicious behaviors, making detection less likely during investigations.
 
 
+## 2. Ransom Note
+
+The content of the ransom note is stored as an encoded string in the executable
+
+<img width="1041" height="848" alt="1_BagCF6T5p-M6-AxrGh8KGg" src="https://github.com/user-attachments/assets/733bab2b-4809-4ffd-a80f-079806b19bcc" />
