@@ -30,7 +30,7 @@ The executable is a 32-bit C++ PE compiled for Windows Vista (Timestamp: July 20
 
 ## 2. Ransom Note
 
-The content of the ransom note is stored as an encoded string in the executable
+The content of the ransom note is stored as an encoded string in the executable. During runtime it is decoded and written to each affected directory.
 
 <img width="1041" height="848" alt="1_BagCF6T5p-M6-AxrGh8KGg" src="https://github.com/user-attachments/assets/733bab2b-4809-4ffd-a80f-079806b19bcc" />
 
