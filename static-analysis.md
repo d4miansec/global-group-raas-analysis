@@ -6,3 +6,13 @@ This sample is a C++ 32 bit portable executable file and was compiled for Window
 ### MD5: 556baf26333a392f3377f41c26189d3c ###
 
 <img width="723" height="447" alt="1_1GT87NcqWRI_QXbZ6EN-qw" src="https://github.com/user-attachments/assets/02cafc92-a13a-4cb8-b905-a2173b4baaa3" />
+
+## 1. Imports & API Calls
+
+### 4.1 High-level API categories
+- **Crypto:** `CryptGenRandom` etc.
+- **File I/O:** `CreateFileW`, `WriteFile`, `ReadFile`, `FindFirstFileExW`, `FindNextFileW`
+- **Process & registry:** `RegSetValueExW`, `RegCreateKeyExW`, `CreateProcessW`, `TerminateProcess`
+- **System controls:** `OpenSCManagerW`, `ControlService`, `TerminateProcess`, `DuplicateTokenExW`
+- **Networking:** `WNetAddConnection2W`, `NetShareEnum`, `IcmpSendEcho`, `DnsQuery_W`
+- **Anti-analysis:** `IsDebuggerPresent`
