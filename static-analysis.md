@@ -50,5 +50,22 @@ The ransomware requires a password passed by the -code command line argument in 
 Below is the list of all command-line arguments it accepts:
 
 - **-log :** Enables console logging
+- **-force :** Enables multi-instance running
+- **-detached :** Start encryption in child process
+- **-code :** Password for starting the file
+- **-path :** Specify path for encryption
+- **-threads :** Sets the number of threads to use for encryption operations
+- **-delay :** Specifies a delay in seconds before starting the encryption process
+- **-time :** Sets a specific time (in HH:MM format) to wait until before starting encryption
+- **-host :** Targets a specific host for encryption or spreading
+- **-skip-local :** Skips encryption of local drives, focusing only on network shares
+- **-skip-net :** Skips network scanning and encryption, focusing only on local drives
+- **-ldap :** Enables LDAP-based domain spreading for network propagation
+- **-u :** Specifies the username for LDAP authentication in network spreading
+- **-p :** Specifies the password for LDAP authentication in network spreading
+
+<img width="645" height="542" alt="1_6XMa0lFBzoCJXtEdVhgZVg" src="https://github.com/user-attachments/assets/a43cabb9-fcae-478a-8630-56e3c48d32f4" />
+
+
 
 
