@@ -36,8 +36,8 @@ The content of the ransom note is stored as an encoded string in the executable.
 
 ## 3. Initialization
 
-Global Ransomware first sets the process's priority class to **HIGH_PRIORITY_CLASS** using the **SetPriorityClass** API function.
-This strategic action ensures that the ransomware operates with enhanced efficiency and responsiveness, allowing it to execute its malicious tasks more effectively.
+Global Ransomware first sets the process’s priority class to **HIGH_PRIORITY_CLASS** using **SetPriorityClass**.
+This ensures the ransomware maintains high CPU priority over other processes, increasing the speed of file enumeration and encryption.
 
 <img width="808" height="169" alt="1_WHvIDFMsRAz9RPnnaaVehQ" src="https://github.com/user-attachments/assets/c8b3eb2c-69e6-416d-9417-2f5dfdc2c627" />
 
