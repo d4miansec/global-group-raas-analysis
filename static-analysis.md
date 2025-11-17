@@ -28,6 +28,37 @@ The executable is a 32-bit C++ PE compiled for Windows Vista (Timestamp: July 20
 | `WNetAddConnection2W` | Connect to SMB shares      | T1021.002 – SMB/Windows Admin Shares |
 | `ClearEventLogW`      | Anti-forensics             | T1070 – Indicator Removal            |
 
+### 2. Strings
+
+This section summarizes interesting or suspicious strings discovered during static analysis.
+Strings can reveal configuration data, ransom note fragments, internal function names, debug output, and artifacts related to persistence or network activity.
+
+These strings typically indicate file-handling behavior, enumeration, or encryption activity:
+
+<img width="825" height="154" alt="image" src="https://github.com/user-attachments/assets/399fd6ad-155c-41c6-937b-930e517e3313" />
+
+Strings referencing networking APIs, hostnames, or network enumeration:
+
+<img width="1013" height="423" alt="image" src="https://github.com/user-attachments/assets/c912bdfe-1b67-4d4f-9f41-3f1cce98526d" />
+
+These messages appear to be internal debug traces. They help infer execution flow and validate ransomware functions:
+
+<img width="949" height="570" alt="image" src="https://github.com/user-attachments/assets/11b53afc-17b8-48b8-a2f7-adf8b1541e9c" />
+
+Ransom Note Fragments:
+
+<img width="1055" height="52" alt="image" src="https://github.com/user-attachments/assets/7bcfe22e-3f2e-42d0-8075-9570e259c51e" />
+
+
+
+
+
+
+
+
+
+
+
 ## 2. Ransom Note
 
 The content of the ransom note is stored as an encoded string in the executable. During runtime it is decoded and written to each affected directory.
