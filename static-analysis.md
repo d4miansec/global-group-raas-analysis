@@ -28,7 +28,7 @@ The executable is a 32-bit C++ PE compiled for Windows Vista (Timestamp: July 20
 | `WNetAddConnection2W` | Connect to SMB shares      | T1021.002 – SMB/Windows Admin Shares |
 | `ClearEventLogW`      | Anti-forensics             | T1070 – Indicator Removal            |
 
-### 2. Strings
+## 2. Strings
 
 This section summarizes interesting or suspicious strings discovered during static analysis.
 Strings can reveal configuration data, ransom note fragments, internal function names, debug output, and artifacts related to persistence or network activity.
