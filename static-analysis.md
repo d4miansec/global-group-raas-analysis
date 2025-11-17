@@ -18,5 +18,11 @@ This sample is a C++ 32 bit portable executable file and was compiled for Window
 - **Anti-analysis:** `IsDebuggerPresent`
 
 ### 4.2 Potentially malicious imports
-List suspicious imports:
 <img width="740" height="164" alt="image" src="https://github.com/user-attachments/assets/3016d699-c849-4e07-89ca-4512ba78fc58" />
+
+dnsapi.dll -> DnsQuery_W
+    Attackers can use DNS queries to discover valid domain names within a network. By querying for various records, they can enumerate active devices, services, and their configurations.
+mpr.dll -> WNetAddConnection2W
+    Ransomware might leverage WNetAddConnection2W to connect to shared drives where sensitive data is stored, thereby facilitating data encryption or exfiltration
+advapi32.dll -> ClearEventLogW
+    By clearing event logs, attackers can hide indicators of compromise (IoCs) and other suspicious behaviors, making detection less likely during investigations.
